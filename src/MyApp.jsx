@@ -7,8 +7,8 @@ import { Routes, Route, Navigate } from "react-router";
 import HomePage from "./compoments/HomePage";
 // import Chat from "./compoments/Chat";
 import DetailPage from "./compoments/DetailPage";
-import ReactChat from "./compoments/ReactChat";
-import OwnerChat from "./compoments/OwnerChat";
+// import ReactChat from "./compoments/ReactChat";
+// import OwnerChat from "./compoments/OwnerChat";
 
 function MyApp() {
   const { currentUser, adminUser } = React.useContext(AuthContext);
@@ -32,13 +32,13 @@ function MyApp() {
       )}
       {(currentUser || jwt) && (!adminUser || !admin) && (
         <Routes>
-          <Route path="/chat" element={<ReactChat />} />
-          <Route path="/adminchat" element={<OwnerChat />} />
+          {/* <Route path="/chat" element={<ReactChat />} /> */}
+          {/* <Route path="/adminchat" element={<OwnerChat />} /> */}
         </Routes>
       )}
       {(adminUser || admin) && (
         <Routes>
-          <Route path="/adminchat" element={<OwnerChat />} />
+          {/* <Route path="/adminchat" element={<OwnerChat />} /> */}
           <Route path="/chat" element={<Navigate replace to="/adminchat" />} />
         </Routes>
       )}
