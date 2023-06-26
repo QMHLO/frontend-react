@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { Routes, Route, useParams } from "react-router-dom";
-import ReactChat from "./ReactChat";
+// import ReactChat from "./ReactChat";
 
 function DetailPage() {
   const [chat, setChat] = useState(false);
@@ -53,7 +53,7 @@ function DetailPage() {
         <p>{data.data.attributes.description}</p>
         {!adminUser && !admin ? <button onClick={chatHandler}>Chat with Owner</button> : ""}
         {/* {chat && <Chat />} */}
-        {chat && <ReactChat />}
+        {/* {chat && <ReactChat />} */}
       </div>
     </>
   );
